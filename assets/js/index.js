@@ -8,9 +8,10 @@ const navLinks = sideBar.querySelectorAll("nav a");
 
 StartUp();
 
-function StartUp() {
+async function StartUp() {
+  await todaySpace.DisplayTodayInfo();
+  await planets.DisplayPlanets();
   RegisterEvents();
-  todaySpace.DisplayTodayInfo();
 }
 
 function OnSwitchSectionLinkActive(link) {
@@ -39,4 +40,5 @@ function SwitchSection(link) {
 function RegisterEvents() {
   RegisterMultiEvents(navLinks, "click", (e) => SwitchSection(e.currentTarget));
   todaySpace.RegisterEvents();
+  planets.RegisterEvents();
 }

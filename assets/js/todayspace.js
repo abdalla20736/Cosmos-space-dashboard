@@ -25,19 +25,15 @@ function Init() {
 function DisplayTodayInfo() {
   apodDate.value = currentDate;
   SetDateTextView(apodDate.value);
-  0;
+
   DisplayInfoByDate();
 }
 
 async function DisplayInfoByDate() {
   ShowLoading();
   let blog = await api.GetBlogByDate(apodDate.value);
-
   updateSpaceBlog(blog);
-  console.log(blog.url);
-
   HideLoading();
-  console.log(blog);
 }
 
 function updateSpaceBlog(blog) {

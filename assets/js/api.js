@@ -13,8 +13,22 @@ async function GetBlogByDate(date) {
   return null;
 }
 
+async function GetPlanets() {
+  try {
+    var res = await fetch(
+      `https://solar-system-opendata-proxy.vercel.app/api/planets`
+    );
+
+    return await res.json();
+  } catch (error) {
+    console.log("Exception by API : " + error.message);
+  }
+  return null;
+}
+
 const api = {
   GetBlogByDate,
+  GetPlanets,
 };
 
 export default api;
