@@ -27,9 +27,9 @@ function OnSwitchSectionLinkActive(link) {
 }
 
 function SwitchSection(link) {
-  var section = link.dataset.section;
+  let section = link.dataset.section;
   OnSwitchSectionLinkActive(link);
-  var sections = document.querySelectorAll("section[id]");
+  let sections = document.querySelectorAll("section[id]");
   let sectionContent = document.getElementById(section);
   sections.forEach((s) => {
     !s.classList.contains("hidden") ? s.classList.add("hidden") : "";

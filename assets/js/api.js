@@ -13,6 +13,19 @@ async function GetBlogByDate(date) {
   return null;
 }
 
+async function GetLaunches() {
+  try {
+    var res = await fetch(
+      `https://lldev.thespacedevs.com/2.3.0/launches/upcoming/?format=json&limit=10`
+    );
+
+    return await res.json();
+  } catch (error) {
+    console.log("Exception by API : " + error.message);
+  }
+  return null;
+}
+
 async function GetPlanets() {
   try {
     var res = await fetch(
@@ -28,6 +41,7 @@ async function GetPlanets() {
 
 const api = {
   GetBlogByDate,
+  GetLaunches,
   GetPlanets,
 };
 
