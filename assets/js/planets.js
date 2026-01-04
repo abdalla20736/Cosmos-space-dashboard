@@ -28,6 +28,7 @@ const planetAxialTilt = document.getElementById("planet-axial-tilt");
 const planetTemp = document.getElementById("planet-temp");
 const planetEscape = document.getElementById("planet-escape");
 const planetTbody = document.getElementById("planet-comparison-tbody");
+const launchesCount = document.getElementById("launches-count");
 
 let planetsData;
 

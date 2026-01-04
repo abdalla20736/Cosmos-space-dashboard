@@ -9,8 +9,9 @@ const navLinks = sideBar.querySelectorAll("nav a");
 StartUp();
 
 async function StartUp() {
-  await todaySpace.DisplayTodayInfo();
-  await planets.DisplayPlanets();
+  // await todaySpace.DisplayTodayInfo();
+  //await planets.DisplayPlanets();
+  await launches.DisplayLaunches();
   RegisterEvents();
 }
 

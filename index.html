@@ -329,12 +329,16 @@
                         Featured Launch
                       </span>
                       <span
-                        class="px-4 py-1.5 bg-green-500/20 text-green-400 rounded-full text-sm font-semibold"
+                        id="launch-logo"
+                        class="px-4 py-1.5 bg-green-500/20 rounded-full text-sm font-semibold"
                       >
                         Go
                       </span>
                     </div>
-                    <h3 class="text-3xl font-bold mb-3 leading-tight">
+                    <h3
+                      id="launch-title"
+                      class="text-3xl font-bold mb-3 leading-tight"
+                    >
                       Starship Flight 3
                     </h3>
                     <div
@@ -342,11 +346,11 @@
                     >
                       <div class="flex items-center gap-2">
                         <i class="fas fa-building"></i>
-                        <span>SpaceX</span>
+                        <span id="first-inner-logo">SpaceX</span>
                       </div>
                       <div class="flex items-center gap-2">
                         <i class="fas fa-rocket"></i>
-                        <span>Starship</span>
+                        <span id="second-inner-logo">Starship</span>
                       </div>
                     </div>
                     <div
@@ -354,7 +358,12 @@
                     >
                       <i class="fas fa-clock text-2xl text-blue-400"></i>
                       <div>
-                        <p class="text-2xl font-bold text-blue-400">2</p>
+                        <p
+                          id="days-to-launch"
+                          class="text-2xl font-bold text-blue-400"
+                        >
+                          2
+                        </p>
                         <p class="text-xs text-slate-400">Days Until Launch</p>
                       </div>
                     </div>
@@ -366,7 +375,9 @@
                           <i class="fas fa-calendar"></i>
                           Launch Date
                         </p>
-                        <p class="font-semibold">March 14, 2024</p>
+                        <p id="launch-date" class="font-semibold">
+                          March 14, 2024
+                        </p>
                       </div>
                       <div class="bg-slate-900/50 rounded-xl p-4">
                         <p
@@ -375,7 +386,9 @@
                           <i class="fas fa-clock"></i>
                           Launch Time
                         </p>
-                        <p class="font-semibold">12:00 PM UTC</p>
+                        <p id="launch-time" class="font-semibold">
+                          12:00 PM UTC
+                        </p>
                       </div>
                       <div class="bg-slate-900/50 rounded-xl p-4">
                         <p
@@ -384,7 +397,9 @@
                           <i class="fas fa-map-marker-alt"></i>
                           Location
                         </p>
-                        <p class="font-semibold text-sm">Starbase, Texas</p>
+                        <p id="launch-location" class="font-semibold text-sm">
+                          Starbase, Texas
+                        </p>
                       </div>
                       <div class="bg-slate-900/50 rounded-xl p-4">
                         <p
@@ -393,10 +408,13 @@
                           <i class="fas fa-globe"></i>
                           Country
                         </p>
-                        <p class="font-semibold">USA</p>
+                        <p id="launch-country" class="font-semibold">USA</p>
                       </div>
                     </div>
-                    <p class="text-slate-300 leading-relaxed mb-6">
+                    <p
+                      id="launch-desc"
+                      class="text-slate-300 leading-relaxed mb-6"
+                    >
                       The third integrated flight test of Starship. The
                       prototype for the heavy-lift launch vehicle is currently
                       being built by SpaceX.
@@ -425,9 +443,11 @@
                 </div>
                 <div class="relative">
                   <div
+                    id="launch-img-container"
                     class="relative h-full min-h-[400px] rounded-2xl overflow-hidden bg-slate-900/50"
                   >
                     <!-- Placeholder image/icon since we can't load external images reliably without correct URLs -->
+
                     <div
                       class="flex items-center justify-center h-full min-h-[400px] bg-slate-800"
                     >
