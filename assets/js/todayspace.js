@@ -32,7 +32,6 @@ function DisplayTodayInfo() {
 async function DisplayInfoByDate() {
   ShowLoading();
   let blog = await api.GetBlogByDate(apodDate.value);
-  console.log(blog);
   OnLoadingComplete(blog);
   updateSpaceBlog(blog);
 }
