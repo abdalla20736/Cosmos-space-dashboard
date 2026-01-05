@@ -4,6 +4,7 @@ import launches from "./launches.js";
 import planets from "./planets.js";
 
 const sideBar = document.getElementById("sidebar");
+const sideBarMobile = document.getElementById("sidebar-toggle");
 const navLinks = sideBar.querySelectorAll("nav a");
 
 StartUp();
@@ -27,7 +28,15 @@ function OnSwitchSectionLinkActive(link) {
   });
 }
 
+function CloseSideBarOnMobile() {
+  if (sideBar.classList.contains("sidebar-open")) {
+    sideBar.classList.remove("sidebar-open");
+    document.body.querySelector(".sidebar-overlay").remove();
+  }
+}
+
 function SwitchSection(link) {
+  CloseSideBarOnMobile();
   let section = link.dataset.section;
   OnSwitchSectionLinkActive(link);
   let sections = document.querySelectorAll("section[id]");
@@ -39,6 +48,17 @@ function SwitchSection(link) {
 }
 
 function RegisterEvents() {
+  sideBarMobile.addEventListener("click", (e) => {
+    sideBar.classList.toggle("sidebar-open");
+    const overlay = document.createElement("div");
+    overlay.classList.add("sidebar-overlay");
+    document.body.appendChild(overlay);
+  });
+  document.addEventListener("click", (e) => {
+    if (e.target === document.body.querySelector(".sidebar-overlay")) {
+      CloseSideBarOnMobile();
+    }
+  });
   RegisterMultiEvents(navLinks, "click", (e) => SwitchSection(e.currentTarget));
   todaySpace.RegisterEvents();
   planets.RegisterEvents();
