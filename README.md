@@ -30,6 +30,6 @@ https://abdalla20736.github.io/Cosmos-space-dashboard/
 - **Font Awesome**
 - **Tailwind CSS**
 
-## 📸 Screenshots
- | Dashboard |
- | ![Dashboard](assets/screenshots/image.png)
+## 📸 Screenshot
+
+  ![Dashboard](assets/screenshots/image.png)
