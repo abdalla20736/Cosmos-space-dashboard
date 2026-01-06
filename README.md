@@ -32,4 +32,4 @@ https://abdalla20736.github.io/Cosmos-space-dashboard/
 
 ## 📸 Screenshots
  | Dashboard |
- | ![Dashboard](assets/screenshots/dashboard.png)
+ | ![Dashboard](assets/screenshots/image.png)
